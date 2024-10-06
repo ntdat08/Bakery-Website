@@ -1853,3 +1853,11 @@ p {
     height: 300px;
     object-fit: cover; 
 }
+.dish-box .dist-img img {
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+}
+
+
+

@@ -170,3 +170,38 @@ jQuery(window).on('load', function () {
 
     }
 });
+let loginBtn = document.getElementById('login-btn');
+let loginForm = document.getElementById('login-form');
+let registerForm = document.getElementById('register-form');
+let createNewLink = document.getElementById('create-link');
+let loginLink = document.getElementById('login-link');
+
+// Hiển thị form đăng nhập khi nhấn vào nút đăng nhập
+loginBtn.addEventListener('click', function() {
+    loginForm.style.display = 'flex'; // Hiển thị form đăng nhập
+    registerForm.style.display = 'none'; // Ẩn form đăng ký nếu đang hiển thị
+});
+
+// Hiển thị form đăng ký khi nhấn vào "Create Now"
+createNewLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    loginForm.style.display = 'none'; // Ẩn form đăng nhập
+    registerForm.style.display = 'flex'; // Hiển thị form đăng ký
+});
+
+// Quay lại form đăng nhập khi nhấn "Login Here" từ form đăng ký
+loginLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    registerForm.style.display = 'none'; // Ẩn form đăng ký
+    loginForm.style.display = 'flex'; // Hiển thị form đăng nhập
+});
+
+// Tắt form đăng nhập/đăng ký khi nhấn ra ngoài
+window.addEventListener('click', function(e) {
+    if (e.target == loginForm) {
+        loginForm.style.display = 'none'; // Tắt form đăng nhập
+    }
+    if (e.target == registerForm) {
+        registerForm.style.display = 'none'; // Tắt form đăng ký
+    }
+});

@@ -55,7 +55,7 @@
                                 <i class="uil uil-shopping-bag"></i>
                                 <span class="cart-number">3</span>
                             </a>
-                            <a href="javascript:void(0)" class="header-btn">
+                            <a href="javascript:void(0)" class="header-btn" id="login-btn">
                                 <i class="uil uil-user-md"></i>
                             </a>
                         </div>
@@ -65,6 +65,28 @@
         </div>
     </header>
     <!-- header ends  -->
+     <!-- form dang nhap -->
+<div class="login-form-container" id="login-form">
+    <form action="#" class="login-form">
+          <h3>Login Now</h3>
+          <input type="email" placeholder="Enter Your Email" class="box" required>
+          <input type="password" placeholder="Enter Your Password" class="box" required>
+          <p>Forget Your Password <a href="#">Click Here</a></p>
+          <p>Don't Have An Account <a href="#" id="create-link">Create Now</a></p>
+          <input type="submit" value="Login Now" class="btn">
+       </form>
+</div>
+<!-- form đăng kí -->
+<div class="register-form-container" id="register-form">
+  <form action="#" class="register-form">
+      <h3>Register Now</h3>
+      <input type="text" placeholder="Enter Your Name" class="box" required>
+      <input type="email" placeholder="Enter Your Email" class="box" required>
+      <input type="password" placeholder="Create a Password" class="box" required>
+      <p>Already Have An Account? <a href="#" id="login-link">Login Here</a></p>
+      <input type="submit" value="Register Now" class="btn">
+  </form>
+</div>
 
     <div id="viewport">
         <div id="js-scroll-content">
